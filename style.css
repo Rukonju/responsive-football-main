@@ -1,10 +1,14 @@
-/* body of web page */
+/*--------------------------------------------------------------------------------------
+                             Common body of web page
+--------------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 body{
     margin: 0;
+    font-family: 'Comfortaa', cursive;
 }
-/* .............................................................................................................
+/*--------------------------------------------------------------------------------------
                                            Header are styled here.
-............................................................................................................. */
+---------------------------------------------------------------------------------------*/
 header{
     background-color: #2D25A0;
 }
@@ -22,41 +26,29 @@ header{
     font-weight: 700;
     padding: 0px 10px 0px 10px;
 }
-.bar-menu a:hover{
-    color:#E02C6D ;
-}
 
 .header{
     display: flex;
-    justify-content: space-evenly;
-    
-    
+    justify-content: space-evenly;   
 }
 .head-title .title{
     font-size: 64px;
-    color: #ffffff;
-    
+    color: #ffffff;  
 }
-
 .live-link a{
     font-size: 16px;
     color: #ffffff;
     text-decoration: none;
     background-color: #E02C6D;
-    padding: 10px 20px 10px 20px ;
-     
+    padding: 10px 20px 10px 20px ;   
 }
-.live-link a:hover{
-    background-color: rgb(13, 13, 44);
-}
+
 .live-link a .fa-arrow-right{
-    
     padding-left: 10px  ;
 }
 .banner img{
     width: 560px;
-    height: 430px;
-    
+    height: 430px;   
 }
 /*................................................................................................................
                                          Style for main section.
@@ -73,15 +65,13 @@ main{
     grid-gap: 20px;
     width: 1050px;
     margin-top: 70px;
-    margin-bottom: 165px;
-     
+    margin-bottom: 165px;    
 }
 .player-details{
     display: flex;
     flex-direction: column;
     padding: 10px;
-    box-shadow: 5px 5px 30px gray;
-    
+    box-shadow: 5px 5px 30px gray;   
 }
 .player img{
     width: 100%;
@@ -103,8 +93,7 @@ main{
     align-items: center;
 }
 .highlights{
-    padding:0px 40px 0px 0px;
-    
+    padding:0px 40px 0px 0px;   
 }
 .highlights-title{
     font-size: 48px;
@@ -118,38 +107,85 @@ main{
 }
 .highlights-photo img{
     width:100% ;
-    height:427px ;
+    height:427px ;  
+}
+/*-----------------------------------------------------------------------------------
+                                    Ranking
+------------------------------------------------------------------------------------*/
+.ranking-container h2{
+    margin-top: 100px;
+}
+.ranking-items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    padding: 10px;
+    border: 2px solid #E02C6D;
+}
+.ranking .item{
     
+    padding: 0px 10px 0px 10px;
+}
+/*-----------------------------------------------------------------------------------
+                                    Sponsored
+ --------------------------------------------------------------------------------- */
+.sponsor-title h2{
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 150px;
+}
+hr{
+    width: 100%;
+    border: 2px solid gray;
+}
+.sponsor-logo img{
+    padding-left: 10px;
+    padding-right: 10px;
 }
 /* -----------------------------------------------------------------------------------
                        Style For Foorter 
 --------------------------------------------------------------------------------------*/
-
 .logo img{
-    
-    width: 400px;
-    
+     width: 400px;  
 }
 .logo{
-    margin-top: 150px;
+    margin-top: 100px;
 }
-/* 
-Social Icon Style
- */
+/*------------------------------------------------------------------------------------- 
+                        Social Icon Style
+ ------------------------------------------------------------------------------------*/
  footer{
      display: flex;
      flex-direction: column;
      align-items: center;
-     justify-content: center;
-     
+     justify-content: center;  
+ }
+ sponsore-title{
+     text-align: center;
  }
  .fa-facebook,.fa-instagram,.fa-twitter,.fa-youtube{
-
      background-color:rgba(0, 0, 0, 0.150) ;
      color: #969BAB;
-     padding: 5px;
+     padding: 10px;
      border-radius: 50%;
  }
+ /*------------------------------------------------------------------ 
+                            Hover Style
+--------------------------------------------------------------------*/
+.bar-menu a:hover{
+    color:#E02C6D ;
+}
+.banner img:hover{
+    transform: rotate(90deg);
+    transition: ease-in-out,2s;
+}
+.live-link a:hover{
+    background-color: rgb(13, 13, 44);
+}
+.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-youtube:hover{
+    color:#E02C6D ;
+    border: 1px solid #E02C6D;
+}
 /*-------------------------------------------------------------------
            Media Quaries For Mobile Device
  -------------------------------------------------------------------- */
@@ -161,47 +197,37 @@ Social Icon Style
      }
 
      .header,.highlights-container{
-    
          display: flex;
-
          flex-direction: column;
          justify-content: space-around;
-         align-items: center;
-         
+         align-items: center;        
      }
      .players{
          display: grid;
          grid-template-columns: 1fr;
-         
-
      }
      .player-details{
          padding: 20px;
-        margin:10px 30px 10px 30px ;
-        
-        
-     }
-     .players,.highlights-container{
-         width: 100%;
-     }
-     .highlights-photo img{
-        width: 630px;
-        height: 450px;
-        margin:  10px 10px 10px -30px;
-        padding: 10px 10px 10px -30px;
-     }
-     .live-link{
-         padding-bottom: 20px;
+         margin:10px 30px 10px 30px ;   
      }
      .player img{
          width: 100%;
          height: 500px;
+    }
+     .players,.highlights-container{
+         width: 100%;
      }
+     .live-link{
+        padding-bottom: 20px;
+    }
      .highlights{
-        margin:20px 30px 20px 30px ;
-        padding-right: 0%;  
-     
-     
+         margin:20px 30px 20px 30px ;
+         padding-right: 0%;  
      }
-     
+     .highlights-photo img{
+         width: 95%;
+         height: 450px;
+         margin-left: auto;
+         margin-right: auto;
+     }    
  }
