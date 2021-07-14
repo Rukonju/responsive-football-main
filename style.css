@@ -22,6 +22,10 @@ header{
     font-weight: 700;
     padding: 0px 10px 0px 10px;
 }
+.bar-menu a:hover{
+    color:#E02C6D ;
+}
+
 .header{
     display: flex;
     justify-content: space-evenly;
@@ -42,6 +46,9 @@ header{
     padding: 10px 20px 10px 20px ;
      
 }
+.live-link a:hover{
+    background-color: rgb(13, 13, 44);
+}
 .live-link a .fa-arrow-right{
     
     padding-left: 10px  ;
@@ -56,7 +63,7 @@ header{
 ................................................................................................................*/
 main{
     display: flex;
-    
+    width: 100%;
     flex-direction: column;
     align-items: center;
 }
@@ -106,19 +113,25 @@ main{
 .highlights-info{
     padding-bottom: 20px;
 }
-.highlights-photo,.highlights-photo img{
-    width:560px ;
-    height:427px ;
-    padding:0px px 0px 40px;
+.highlights-photo{
+    padding:0px 0px 0px 40px;
 }
-/* logo Style */
+.highlights-photo img{
+    width:100% ;
+    height:427px ;
+    
+}
+/* -----------------------------------------------------------------------------------
+                       Style For Foorter 
+--------------------------------------------------------------------------------------*/
+
 .logo img{
-    width: 800px;
+    
     width: 400px;
     
 }
 .logo{
-    margin-top: 50px;
+    margin-top: 150px;
 }
 /* 
 Social Icon Style
@@ -136,4 +149,59 @@ Social Icon Style
      color: #969BAB;
      padding: 5px;
      border-radius: 50%;
+ }
+/*-------------------------------------------------------------------
+           Media Quaries For Mobile Device
+ -------------------------------------------------------------------- */
+ @media only screen and (max-width:688px) {
+     .bar-menu{
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+     }
+
+     .header,.highlights-container{
+    
+         display: flex;
+
+         flex-direction: column;
+         justify-content: space-around;
+         align-items: center;
+         
+     }
+     .players{
+         display: grid;
+         grid-template-columns: 1fr;
+         
+
+     }
+     .player-details{
+         padding: 20px;
+        margin:10px 30px 10px 30px ;
+        
+        
+     }
+     .players,.highlights-container{
+         width: 100%;
+     }
+     .highlights-photo img{
+        width: 630px;
+        height: 450px;
+        margin:  10px 10px 10px -30px;
+        padding: 10px 10px 10px -30px;
+     }
+     .live-link{
+         padding-bottom: 20px;
+     }
+     .player img{
+         width: 100%;
+         height: 500px;
+     }
+     .highlights{
+        margin:20px 30px 20px 30px ;
+        padding-right: 0%;  
+     
+     
+     }
+     
  }
